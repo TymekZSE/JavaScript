@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 12</title>
+    <script language="JavaScript">
+        function okno_zamknij_trz() { 
+            window.close(); 
+        }
+    </script>
+    <meta charset="utf-8">   
+</head>  
+<body> 
+    <div style="color:green; font-size:47px;"> 
+        <script language="JavaScript"> 
+           
+            var D1_trz = prompt("Podaj pierwszy dzień miesiąca stycznia (D1):", ""); 
+            var D2_trz = prompt("Podaj drugi dzień miesiąca stycznia (D2):", ""); 
+            var G1_trz = prompt("Podaj pierwszą godzinę (G1):", ""); 
+            var G2_trz = prompt("Podaj drugą godzinę (G2):", "");
+
+  
+            var d1 = parseInt(D1_trz); 
+            var d2 = parseInt(D2_trz); 
+            var g1 = parseInt(G1_trz); 
+            var g2 = parseInt(G2_trz);
+
+          
+            var sekundy_d1 = (d1 - 1) * 24 * 60 * 60 + g1 * 60 * 60;
+            var sekundy_d2 = (d2 - 1) * 24 * 60 * 60 + g2 * 60 * 60;
+
+            var liczba_sekund;
+            if (sekundy_d1 > sekundy_d2) {
+                liczba_sekund = sekundy_d1 - sekundy_d2;
+            } else {
+                liczba_sekund = sekundy_d2 - sekundy_d1;
+            }
+
+          
+            document.write("Dla dni D1=" + d1 + " i D2=" + d2 + ", godzin G1=" + g1 + " i G2=" + g2 + "<br>"); 
+            document.write("Ilość sekund pomiędzy nimi: " + liczba_sekund + " sekund.<br>"); 
+        </script> 
+    </div>
+
+    <form>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_trz()"/> 
+    </form>
+</body> 
+</html>
