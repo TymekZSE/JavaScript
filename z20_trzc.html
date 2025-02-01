@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20</title>
+</head>
+<body>
+    <h2>Oblicz długości boków trójkąta</h2>
+    <form>
+        <label>A(xa, ya): </label>
+        <input type="number" id="xa_trz" placeholder="xa">
+        <input type="number" id="ya_trz" placeholder="ya"><br><br>
+        
+        <label>B(xb, yb): </label>
+        <input type="number" id="xb_trz" placeholder="xb">
+        <input type="number" id="yb_trz" placeholder="yb"><br><br>
+        
+        <label>C(xc, yc): </label>
+        <input type="number" id="xc_trz" placeholder="xc">
+        <input type="number" id="yc_trz" placeholder="yc"><br><br>
+        
+        <button type="button" onclick="obliczBoki()">Oblicz długości boków</button>
+    </form>
+    
+    <h3>Wyniki:</h3>
+    <p>AB: <span id="ab_wynik"></span></p>
+    <p>BC: <span id="bc_wynik"></span></p>
+    <p>AC: <span id="ac_wynik"></span></p>
+
+    <script>
+
+        function AB_trz(xa, ya, xb, yb) {
+            return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+        }
+
+        function BC_trz(xb, yb, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+        }
+
+        function AC_trz(xa, ya, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+        }
+
+        function obliczBoki() {
+            let xa = parseFloat(document.getElementById("xa_trz").value);
+            let ya = parseFloat(document.getElementById("ya_trz").value);
+            let xb = parseFloat(document.getElementById("xb_trz").value);
+            let yb = parseFloat(document.getElementById("yb_trz").value);
+            let xc = parseFloat(document.getElementById("xc_trz").value);
+            let yc = parseFloat(document.getElementById("yc_trz").value);
+
+            let ab = AB_trz(xa, ya, xb, yb).toFixed(2);
+            let bc = BC_trz(xb, yb, xc, yc).toFixed(2);
+            let ac = AC_trz(xa, ya, xc, yc).toFixed(2);
+
+            document.getElementById("ab_wynik").innerText = ab;
+            document.getElementById("bc_wynik").innerText = bc;
+            document.getElementById("ac_wynik").innerText = ac;
+        }
+    </script>
+	
+
+	
+</body> 
+</html>

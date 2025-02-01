@@ -1,0 +1,49 @@
+<!DOCTYPE html>   
+<head>    
+<title> Użycie fukcji - zadanie 18 </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:navy;font-size:50px;"> 
+<script language="JavaScript"> 
+var a=parseFloat(prompt("a=","")); 
+var b=parseFloat(prompt("b=","")); 
+
+
+function suma_trz(a, b) { 
+return a + b; 
+} 
+document.write("suma="+suma_trz(a,b)+"<br>"); 
+
+
+function odejmowanie_trz(a, b) { 
+return a - b; 
+} 
+document.write("odejmowanie="+odejmowanie_trz(a,b)+"<br>"); 
+
+function mnożenie_trz(a, b) { 
+return a * b; 
+} 
+document.write("mnożenie="+mnożenie_trz(a,b)+"<br>"); 
+
+
+            function od_kwadratu_trz(a, b) {
+                return [a * a, b * b];
+            }
+            var kwadraty = od_kwadratu_trz(a, b);
+            document.write("a do kwadratu" + a + "^2 = " + kwadraty[0] + "<br>");
+            document.write("b do kwadratu" + b + "^2 = " + kwadraty[1] + "<br>");
+			
+			
+function reszta_z_dzielenia_a_przez_b_trz(a, b) { 
+return a % b; 
+} 
+document.write("Reszta z dzielenia="+reszta_z_dzielenia_a_przez_b_trz(a,b)+"<br>");
+
+
+
+
+</script> 
+</div> 
+</body> 
+</html> 
