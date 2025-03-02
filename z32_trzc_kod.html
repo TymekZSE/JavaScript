@@ -1,0 +1,95 @@
+<!DOCTYPE html>   
+<html>
+<head> 
+
+
+   
+    <script type="text/javascript"> 
+        function okno_zamknij_trzciński() { 
+            window.close(); 
+        } 
+    </script>
+</head>
+<body> 
+    <form> 
+        <textarea name="trzciński" cols="160" rows="77" readonly> 
+		
+<html>
+     <head>
+           <script type="text/javascript">
+                 function Owoc(nazwa, kolor, smak, kraj) {
+                   this.nazwa = nazwa;
+                   this.kolor = kolor;
+                   this.smak = smak;
+                   this.kraj = kraj;
+                 }
+
+                 Owoc.prototype.Owoc_wyswietl_trzciński = function() {
+                   document.write('Nazwa: ' + this.nazwa + '<br>' +
+                                  'Kolor: ' + this.kolor + '<br>' +
+                                  'Smak: ' + this.smak + '<br>' +
+                                  'Kraj: ' + this.kraj + '<br>');
+                 }
+
+                 Owoc.prototype.Owoc_pokaz_trzciński = function() {
+                   alert('Cena: ' + this.cena);
+                 }
+
+                 var owoc1 = new Owoc('Jabłko', 'Czerwony', 'Słodki', 'Polska');
+                 var owoc2 = new Owoc('Gruszka', 'Żółty', 'Słodko-kwaśny', 'Francja');
+                 var owoc3 = new Owoc('Śliwka', 'Fioletowy', 'Kwaśny', 'Hiszpania');
+
+                 owoc1.cena = '5 zł';
+                 owoc2.cena = '4 zł';
+                 owoc3.cena = '6 zł';
+
+                 owoc1.Owoc_wyswietl_trzciński();
+                 owoc2.Owoc_wyswietl_trzciński();
+                 owoc3.Owoc_wyswietl_trzciński();
+
+                 document.write("<br>Dostęp do właściwości<br>");
+                 document.write("Obiekt pierwszy: " + owoc1.nazwa + " " + owoc1.kolor + " " + owoc1.smak + " " + owoc1.cena + " " + owoc1.kraj + "<br>");
+                 document.write("Obiekt drugi: " + owoc2.nazwa + " " + owoc2.kolor + " " + owoc2.smak + " " + owoc2.cena + " " + owoc2.kraj + "<br>");
+                 document.write("Obiekt trzeci: " + owoc3.nazwa + " " + owoc3.kolor + " " + owoc3.smak + " " + owoc3.cena + " " + owoc3.kraj + "<br>");
+
+                 function pokazCene1() {
+                   owoc1.Owoc_pokaz_trzciński();
+                 }
+
+                 function pokazCene2() {
+                   owoc2.Owoc_pokaz_trzciński();
+                 }
+
+                 function pokazCene3() {
+                   owoc3.Owoc_pokaz_trzciński();
+                 }
+
+                 Owoc.prototype.Owoc_pokaz_nazwisko_trzciński = function() {
+                   alert('Nazwisko ucznia: Trzciński');
+                 }
+            </script> 
+     </head> 
+<body> 
+ <br> <br>
+Programowanie obiektowe. <br>
+Obiekt: Owoc<br>
+Pola: nazwa, kolor, smak, kraj<br>
+Metoda: Owoc_wyswietl_trzciński<br>
+Nowe pole: cena<br>
+Nowa metoda: Owoc_pokaz_trzciński<br>
+Metoda ucznia: Owoc_pokaz_nazwisko_trzciński<br>
+<br>
+<button onclick="pokazCene1()">Pokaż cenę Jabłka</button>
+<button onclick="pokazCene2()">Pokaż cenę Gruszki</button>
+<button onclick="pokazCene3()">Pokaż cenę Śliwki</button>
+<button onclick="owoc1.Owoc_pokaz_nazwisko_trzciński()">Pokaż nazwisko ucznia</button>
+</body> 
+</html>
+
+
+
+</textarea> 
+    </form> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzciński()"/> 
+</body> 
+</html>
