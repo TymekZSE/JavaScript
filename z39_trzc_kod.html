@@ -1,0 +1,58 @@
+<!DOCTYPE html>   
+<html>
+<head> 
+
+
+   
+    <script type="text/javascript"> 
+        function okno_zamknij_trzciński() { 
+            window.close(); 
+        } 
+    </script>
+</head>
+<body> 
+    <form> 
+        <textarea name="trzciński" cols="120" rows="40" readonly> 
+		
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 style="color: green">MENU</h1>
+    <p> </p>
+    <h1 style="color: red">1-CZERWONY</h1>
+    <h1 style="color: blue">2-NIEBIESKI</h1>
+
+    <div style="color:red;font-size:50px;">
+      <input type="button" value="Oblicz" onclick="fun_trzc()" />
+    </div>
+
+    
+    <div id="wynik" style="margin-top: 20px;"></div>
+
+    <script>
+      function fun_trzc() {
+        var x_trzc = prompt("Podaj kolor lub numer", "");
+        var wynikDiv = document.getElementById("wynik");
+
+      
+        var input = x_trzc.toLowerCase();
+
+        if (input == "1" || input == "czerwony") {
+          wynikDiv.innerHTML = "<font color='red' size='7'>Wczytałeś kolor czerwony</font>";
+        } else if (input == "2" || input == "niebieski") {
+          wynikDiv.innerHTML = "<font color='blue' size='1'>Wczytałeś kolor niebieski</font>";
+        } else {
+          wynikDiv.innerHTML = "<span style='color:gray;'>Nie rozpoznano koloru</span>";
+        }
+      }
+    </script>
+  </body>
+</html>
+ 
+
+
+</textarea> 
+    </form> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzciński()"/> 
+</body> 
+</html>
