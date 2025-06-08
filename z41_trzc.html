@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zadanie 41 – Pętle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    pre {
+      background-color: #eef;
+      padding: 10px;
+      border-left: 4px solid #004080;
+      overflow-x: auto;
+    }
+    .petla {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zadanie 41 </h1>
+
+
+  <div class="petla">
+    <h2>Pętla for</h2>
+    <p><strong>Opis:</strong> Pętla for wykonuje się określoną liczbę razy. Nadaje się najlepiej do sytuacji, w których z góry znamy liczbę iteracji.</p>
+    <pre><code>for (int i = 0; i < 5; i++) {
+    cout &lt;&lt; i &lt;&lt; endl;
+}</code></pre>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="petla_for.png" alt="Schemat pętli for">
+  </div>
+
+  <div class="petla">
+    <h2>Pętla while (z kontrolowanym wejściem)</h2>
+    <p><strong>Opis:</strong> Pętla while najpierw sprawdza warunek, a dopiero potem wykonuje blok instrukcji. Może się nie wykonać ani razu.</p>
+    <pre><code>int i = 0;
+while (i &lt; 5) {
+    cout &lt;&lt; i &lt;&lt; endl;
+    i++;
+}</code></pre>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="petla_while.png" alt="Schemat pętli while">
+  </div>
+
+  <div class="petla">
+    <h2>Pętla do while (z kontrolowanym wyjściem)</h2>
+    <p><strong>Opis:</strong> Pętla do while najpierw wykona blok instrukcji, a potem sprawdzi warunek. Wykona się co najmniej raz.</p>
+    <pre><code>int i = 0;
+do {
+    cout &lt;&lt; i &lt;&lt; endl;
+    i++;
+} while (i &lt; 5);</code></pre>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="petla_do_while.png" alt="Schemat pętli do while">
+  </div>
+</body>
+</html>

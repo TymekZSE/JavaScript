@@ -1,0 +1,54 @@
+<!DOCTYPE html>   
+<html>
+<head> 
+
+
+   
+    <script type="text/javascript"> 
+        function okno_zamknij_trzciński() { 
+            window.close(); 
+        } 
+    </script>
+</head>
+<body> 
+    <form> 
+        <textarea name="trzciński" cols="70" rows="37" readonly> 
+		
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 56 – wielomian i liczby pierwsze</title>
+</head>
+<body>
+  
+  <div id="wynik_trz" style="font-size:18px; color:green;"></div>
+  <button onclick="pokazKolejne_trz()">Dalej</button>
+
+<script>
+  let i_trz = 0;
+  const wynikDiv_trz = document.getElementById("wynik_trz");
+
+  function pokazKolejne_trz() {
+    for (let j_trz = 0; j_trz < 5 && i_trz < 40; j_trz++, i_trz++) {
+      let w_trz = i_trz * i_trz + i_trz + 41;
+      wynikDiv_trz.innerHTML += `i=${i_trz}   w(${i_trz})=${w_trz}<br>`;
+    }
+    if (i_trz >= 40) {
+      document.querySelector("button").disabled = true;
+      wynikDiv_trz.innerHTML += "<br><strong>Koniec</strong>";
+    }
+  }
+
+  pokazKolejne_trz();
+</script>
+</body>
+</html>
+
+
+
+</textarea> 
+    </form> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzciński()"/> 
+</body> 
+</html>

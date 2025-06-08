@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pierwiastki – zadanie z dziennika</title>
+</head>
+<body>
+
+  <div id="wynik_trz" style="font-size:18px; color:blue; font-family:monospace; white-space:pre;"></div>
+  <button onclick="pokazKolejne_trz()">Dalej</button>
+
+<script>
+  const numer_dziennika_trz = 29;
+  let i_trz = numer_dziennika_trz;
+  const wynik_trz = document.getElementById("wynik_trz");
+
+  function pierwiastek2_trz(n) {
+    return Math.sqrt(n).toFixed(2);
+  }
+
+  function pierwiastek4_trz(n) {
+    return Math.sqrt(Math.sqrt(n)).toFixed(2);
+  }
+
+  function pokazKolejne_trz() {
+    for (let licznik = 0; licznik < 3 && i_trz <= numer_dziennika_trz + 15; licznik++, i_trz++) {
+      wynik_trz.innerHTML += `i=${i_trz}         pierw_2(${i_trz})=${pierwiastek2_trz(i_trz)}         pierw_4(${i_trz})=${pierwiastek4_trz(i_trz)}\n`;
+    }
+
+    if (i_trz > numer_dziennika_trz + 15) {
+      document.querySelector("button").disabled = true;
+      wynik_trz.innerHTML += "\n\nKoniec";
+    }
+  }
+
+  pokazKolejne_trz();
+</script>
+
+</body>
+</html>

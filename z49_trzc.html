@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Trzciński - Zadanie 49</title>
+</head>
+<body>
+  <div style="color:green; font-size:40px;">
+    <script>
+      
+      let n_trz = parseInt(prompt("Podaj liczbę n =", ""));
+      let silnia_trz;
+
+      if (n_trz === 0) {
+        silnia_trz = 1;
+      } else {
+        silnia_trz = 1;
+        for (let i_trz = 1; i_trz <= n_trz; i_trz++) {
+          silnia_trz *= i_trz;
+        }
+      }
+
+      document.write("n = " + n_trz + "<br>");
+      document.write(n_trz + "! = " + silnia_trz);
+    </script>
+  </div>
+</body>
+</html>

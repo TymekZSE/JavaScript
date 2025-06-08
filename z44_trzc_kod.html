@@ -1,0 +1,57 @@
+<!DOCTYPE html>   
+<html>
+<head> 
+
+
+   
+    <script type="text/javascript"> 
+        function okno_zamknij_trzciński() { 
+            window.close(); 
+        } 
+    </script>
+</head>
+<body> 
+    <form> 
+        <textarea name="trzciński" cols="95" rows="42" readonly> 
+		
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Imię i nazwisko na przemian</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script>
+  
+    let kon_pet_trz = 11; 
+    let roz_trz = 40;     
+
+
+    document.write("Ilość wykonania pętli = " + kon_pet_trz + "<br>");
+    document.write("Wielkość liter = " + roz_trz + "px<br><br>");
+
+
+    for (let i_trz = 1; i_trz <= kon_pet_trz; i_trz++) {
+      if (i_trz % 2 !== 0) {
+    
+        document.write("<span style='font-size:" + roz_trz + "px;'>Trzciński</span><br>");
+      } else {
+        
+        document.write("<span style='font-size:" + roz_trz + "px;'>Tymoteusz</span><br>");
+      }
+    }
+  </script>
+</body>
+</html>
+
+   
+</textarea> 
+    </form> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzciński()"/> 
+</body> 
+</html>

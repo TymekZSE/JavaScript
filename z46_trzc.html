@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Sprawdzenie danych Trzciński</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <div style="color:red; font-size:50px;">
+    <script>
+      let h_trz;
+      do {
+        let liczba1 = prompt("wysokość = ", "");
+        h_trz = parseFloat(liczba1);
+      } while (h_trz <= 0);
+
+      let a_trz;
+      do {
+        let liczba2 = prompt("podstawa = ", "");
+        a_trz = parseFloat(liczba2);
+      } while (!(a_trz > 0));
+
+      let Pole = a_trz * h_trz / 2;
+      document.write("Pole = " + Pole.toFixed(2) + " cm²<br>");
+    </script>
+  </div>
+</body>
+</html>

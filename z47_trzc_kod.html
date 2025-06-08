@@ -1,0 +1,63 @@
+<!DOCTYPE html>   
+<html>
+<head> 
+
+
+   
+    <script type="text/javascript"> 
+        function okno_zamknij_trzciński() { 
+            window.close(); 
+        } 
+    </script>
+</head>
+<body> 
+    <form> 
+        <textarea name="trzciński" cols="95" rows="45" readonly> 
+		
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Sprawdzanie trójkąta - Trzciński</title>
+</head>
+<body>
+  <div style="font-size:24px; color:green;">
+    <script>
+      let a_trz, b_trz, c_trz;
+      let poprawneDane = false;
+
+      do {
+     
+        a_trz = parseFloat(prompt("Podaj bok a:", ""));
+        b_trz = parseFloat(prompt("Podaj bok b:", ""));
+        c_trz = parseFloat(prompt("Podaj bok c:", ""));
+
+       
+        if (
+          a_trz > 0 && b_trz > 0 && c_trz > 0 &&
+          a_trz + b_trz > c_trz &&
+          a_trz + c_trz > b_trz &&
+          b_trz + c_trz > a_trz
+        ) {
+          poprawneDane = true;
+        } else {
+          alert("Niepoprawne dane! Podaj trzy poprawne boki trójkąta.");
+        }
+      } while (!poprawneDane);
+
+      document.write("Podano poprawne boki trójkąta:<br>");
+      document.write("a = " + a_trz + " cm<br>");
+      document.write("b = " + b_trz + " cm<br>");
+      document.write("c = " + c_trz + " cm<br>");
+    </script>
+  </div>
+</body>
+</html>
+
+
+   
+</textarea> 
+    </form> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trzciński()"/> 
+</body> 
+</html>
